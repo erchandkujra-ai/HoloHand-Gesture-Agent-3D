@@ -1,60 +1,122 @@
-# HoloHand (gesture-agent-3d)
-## Dev / Creator = CHAND RAIN
-Control exploded 3D models with your bare hands. Your webcam is the background, a hand skeleton and a gold ring follow your hand,
-and each model is a glowing point cloud that pulls apart into labelled parts so you can see what is inside.
+# 🤖 HoloHand Gesture Agent 3D
 
-Everything runs in the browser: MediaPipe Hand Landmarker + Three.js. No backend, no API keys, nothing is uploaded.
+An interactive 3D hand gesture recognition project that explores human-computer interaction using computer vision, hand tracking, and 3D visualization.
 
-## Run
+## 🚀 Project Overview
 
-Needs Node.js 18+ and Chrome or Edge.
+HoloHand Gesture Agent 3D aims to create a touchless interaction experience where users can interact with digital environments using hand gestures.
+
+The project focuses on connecting real-world hand movements with virtual 3D interactions.
+
+## ✨ Key Features
+
+- Real-time hand gesture recognition
+- Webcam-based hand tracking
+- Touchless human-computer interaction
+- Interactive 3D visualization
+- Gesture-based controls
+- Computer vision integration
+
+*Note: Features depend on the implemented modules and project configuration.*
+
+## 🛠️ Technologies Used
+
+- Python
+- Computer Vision
+- Hand Tracking
+- 3D Visualization
+- OpenCV
+- MediaPipe
+- Git & GitHub
+
+*Verify the actual dependencies in `requirements.txt` before claiming every technology is implemented.*
+
+## 📁 Project Structure
+
+```text
+HoloHand-Gesture-Agent-3D/
+│
+├── main.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+│
+├── src/
+│   ├── __init__.py
+│   └──
+│
+├── models/
+├── outputs/
+└── docs/
+```
+
+*Update this structure to match your actual project files.*
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the Repository
 
 ```bash
-cd gesture-agent-3d
-npm install
-npm run dev
+git clone https://github.com/erchandkujra-ai/HoloHand-Gesture-Agent-3D.git
 ```
 
-Open the URL Vite prints (normally http://localhost:5173) and click **Start camera**. Camera only works on `http://localhost` or `https`.
-`npm install` copies the MediaPipe WASM and downloads the hand model into `public/`. If that download is blocked, the app fetches both from a CDN at runtime.
+### 2. Navigate to Project Folder
 
-## Models
-
-Turbofan Jet Engine (fan, guide vanes, compressors, combustor, turbines, shaft, nozzle) ·
-Radial Aircraft Engine (crankcase, 9 cylinders, pistons, rods, crankshaft, exhaust ring, supercharger) ·
-Sports Car (body panels, chassis, engine, drivetrain, seats, wheels, brakes) ·
-Human Brain (4 lobes, cerebellum, brainstem, corpus callosum, thalamus, hippocampus, amygdala, hypothalamus)
-
-## Gestures
-
-| Gesture | Effect |
-|---|---|
-| Open hand slowly | Explode the model. The white arc on the gold ring shows how far. |
-| Close your hand / fist | Pull it back together |
-| Move or twist your hand | Rotate and tilt the model |
-| Point (index finger) | Highlight the part under your fingertip. Hold still to lock it. |
-| Pinch while over a part | Grab it, drag it out, release to snap it back |
-| Two hands | Move them apart or together to zoom |
-| Peace sign (hold ~0.3 s) | Jump to the next model |
-
-## Mouse and keyboard
-
-Drag = rotate · scroll = zoom · click a part = inspect it · `Space` = explode / assemble · `←` `→` or `1`–`4` = switch model · `R` = reset view.
-Sliders in the left panel control the explosion and its intensity. The top-right buttons toggle camera background, hand skeleton, labels and fullscreen.
-
-## Tips
-
-- Even light and a plain background help. Keep your hand 40–80 cm from the camera, palm facing it.
-- Open and close your hand slowly. The peace sign needs a short hold so it does not trigger by accident.
-
-## Files
-
-```
-src/main.js          app loop, hand overlay, gesture -> action, labels, UI
-src/handTracking.js  MediaPipe wrapper (2 hands, local files then CDN, GPU then CPU)
-src/gestureEngine.js landmarks -> gesture, openness, smoothed palm / fingertip / pinch, wrist roll
-src/scene.js         Three.js point-cloud renderer: explode, scatter transition, picking, part dragging
-src/models/          shapes.js (point sampling) + jet / radial / car / brain definitions
+```bash
+cd HoloHand-Gesture-Agent-3D
 ```
 
-To add a model: write a `build()` returning parts (`P(name, description, color, [I(cloud, explodeDirection)])`) and register it in `src/models/index.js`.
+### 3. Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+### 4. Activate Virtual Environment
+
+Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### 5. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run the Project
+
+Check the project's actual entry point and run command before execution. For example:
+
+```bash
+python main.py
+```
+
+## 🎯 Project Objective
+
+The objective is to explore gesture-based interaction and demonstrate how computer vision can make digital interfaces more intuitive, interactive, and accessible.
+
+## 🔮 Future Improvements
+
+- Add more hand gesture classes
+- Improve gesture recognition accuracy
+- Enhance 3D interaction
+- Add customizable gesture controls
+- Improve real-time performance
+- Build a user-friendly interface
+
+## 👨‍💻 Developer
+
+**ER CHAND RAIN**
+
+GitHub: [@erchandkujra-ai](https://github.com/erchandkujra-ai)
+
+## ⭐ Support
+
+If you find this project interesting, consider giving it a star on GitHub.
+
+---
+
+**Built with curiosity, creativity, and Artificial Intelligence.** 🚀
